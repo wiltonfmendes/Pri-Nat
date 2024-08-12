@@ -1,0 +1,98 @@
+body {
+    font-family: 'Cursive', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe6e6;
+    background-image: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+    color: #ff6699;
+    text-align: center;
+    overflow: hidden; /* Evita rolagem */
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff99cc;
+    height: 350px; /* Ajustei a altura para acomodar o espaço extra */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 50px; /* Aumentei o espaço abaixo do título */
+    color: #ff3366;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nao {
+    background-color: #ff3366;
+    color: white;
+    position: absolute;
+    top: 60%; /* Ajustei a posição para baixo, mantendo espaço */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sim {
+    background-color: #33cc99;
+    color: white;
+    position: relative;
+}
+
+#naoButton:hover {
+    background-color: #ff6699;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#simButton:hover {
+    background-color: #66ffcc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+h1::after {
+    content: '💖';
+    font-size: 30px;
+    display: block;
+    margin-top: 10px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.mensagem-escondida {
+    display: none; /* A mensagem começa escondida */
+    margin-top: 50px;
+    font-size: 22px;
+    color: #ff3366;
+    animation: fadeIn 2s ease-in-out forwards; /* Adiciona uma animação de fade-in */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
