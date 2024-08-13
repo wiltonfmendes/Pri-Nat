@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         musica.play();
 
-        mensagemFinal.style.display = 'block';
+        mensagemOc.style.display = 'block';
 
 
         
@@ -37,5 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
         naoButton.style.display = 'none';
 
         document.getElementById("titulo").style.visibility = "hidden";
+        
+        setTimeout(function() {
+            AumentaSom.style.display = 'block';
+          }, 2700);
+
     });
 });
