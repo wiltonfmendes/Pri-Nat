@@ -21,19 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         naoButton.style.left = `${x}px`;
         naoButton.style.top = `${y}px`;
 
-   
+
         simButton.style.display = 'block';
     });
 
     simButton.addEventListener('click', () => {
-        
+
         musica.play();
 
-       
         mensagemFinal.style.display = 'block';
 
+
         
-        simButton.disabled = true;
-        naoButton.disabled = true;
+        simButton.style.display = 'none';
+        naoButton.style.display = 'none';
+
+        document.getElementById("titulo").style.visibility = "hidden";
     });
 });
