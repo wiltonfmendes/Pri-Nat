@@ -45,7 +45,7 @@ button {
     background-color: #ff3366;
     color: white;
     position: absolute;
-    top: 60%; /* Ajustei a posição para baixo, mantendo espaço */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -53,7 +53,11 @@ button {
 .sim {
     background-color: #33cc99;
     color: white;
-    position: relative;
+    position: absolute;
+    top: 60%; /* Ajustei a posição para baixo, mantendo espaço */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Esconde o botão "Sim" inicialmente */
 }
 
 #naoButton:hover {
@@ -64,6 +68,19 @@ button {
 #simButton:hover {
     background-color: #66ffcc;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mensagem-escondida {
+    display: none; /* A mensagem começa escondida */
+    margin-top: 50px;
+    font-size: 22px;
+    color: #ff3366;
+    animation: fadeIn 2s ease-in-out forwards; /* Adiciona uma animação de fade-in */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 h1::after {
@@ -82,17 +99,3 @@ h1::after {
         transform: scale(1.1);
     }
 }
-
-.mensagem-escondida {
-    display: none; /* A mensagem começa escondida */
-    margin-top: 50px;
-    font-size: 22px;
-    color: #ff3366;
-    animation: fadeIn 2s ease-in-out forwards; /* Adiciona uma animação de fade-in */
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
