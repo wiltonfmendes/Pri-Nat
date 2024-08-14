@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(function() {
             AumentaSom.style.display = 'block';
-          }, 2700);
+          }, 2800);
 
     });
 });
